@@ -1,0 +1,55 @@
+In the last program that I had submitted , it was the program of a very basic lift that would just take one person 
+reach the destination and then would consider the request of another person.
+
+But the program that I am submitting now , I tried to make as much improvement as possible
+From the internet I learned many new concepts of programming such as vector , different functions of vector
+I also tried to learn how to implement coordination between different objects of a class
+I also learned how to extract words from a space separated string line and the use of cin.ignore()
+
+But I also could not include a few concepts such as my program does not consider the up and down button , 
+it directly takes the floor request from outside and automatically detects whether it is up or down
+For the limiting condition of lift, I considered the number of passengers and not their weight. Later I will
+surely try to incorporate the up and down button and the functioning of two lifts.
+
+####################### EXPLANATION OF THE WORKING OF PROGRAM ##############################
+
+set_request() function takes the input from the people waiting at a floor (both one or many)
+in a string format where the different floor requests are separated by a space. I used getline
+instead of cin because the string input would consist of spaces. Then if the request reads GO,
+that means either no ene would enter the lift from that floor or if the lift is already empty 
+then the program would terminate. Otherwise I extracted single floor from the list of floors , 
+and checked the validity of the request. A request would be invalid in 3 cases :
+      a. If lift is moving UPWARD and person wants to go DOWNWARD
+      b. If lift is moving DOWNWARD and person wants to go UPWARD
+      c. If person enters a floor number greater than max or smaller than min
+If the request is considered valid then the request is stored in the vector.
+The safety condition is also checked if the no of passengers are less than the maximun
+capacity of the lift.
+
+
+verify_request() function takes floor number as an argument and returns either 
+1 or 2 or 3 or 4 depending upon the condition mentioned in the comments of program
+
+
+is_request_valid() function calls the verify_request() function with floor as an
+arguments and displays the error message representing 1 or 2 or 3 in above function
+
+
+set_direction() function takes floor as an argument and says whether the lift has to 
+move in UPWARD or DOWNWARD direction 
+
+
+start_lift() is the most important part of the program
+It first calls the set_request() to take the input , then it sorts the floor requests
+made in ascending order by using a sort function nd then by using vectors , it keeps on updating 
+the next_floor and the current_floor. It also keeps a record of no of passengers who move
+out of the lift and no of passengers left in lift. When it reaches a floor , it removes all the
+requests of he current floor and subsequently subtracts the no of passengers exit.
+
+
+main() function is used to take the input from the user about various data such as
+maximum floor number, minimum floor number , capacity of the lift and and call the 
+constructor in order to initialize the constant variables. Then it calls the start_lift()
+function the functioning of the program starts.
+
+***************************END OF EXPLANATION OF PROGRAM*******************************

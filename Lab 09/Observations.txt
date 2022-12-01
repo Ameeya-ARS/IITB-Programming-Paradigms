@@ -1,0 +1,87 @@
+Actually our entire family has tested covid positive including me
+So I could submit the lab 9 on Monday as I was not feeling well
+Just on last day of improvements, I am feeling little better
+So I am submitting the lab with as much changes as I could do
+Please consider the improvemments as my submission,.........
+Thankyou
+
+################ evaloder1.cpp #################
+I inserted two more function calls f(p--) and f(--p)
+and I was also able to guess the output correctly
+The basic logic is that if we use f(++p) that is the
+prefix operatior , then first the value of p is updated
+and then the updated value is sent in the function call.
+But if we use f(p++) that is the postfix operator , then
+first original value of p is sent in ythe function call
+and then the value of p is updated.
+
+################ lval-rval.cpp ###################
+x++ = x++ is not correct because the left hand side
+should be a location and not an expression....
+just like x+1 = 10 is also not valid...As there is no 
+location on left hand side, the compiler gives an error.
+left hand side ++x just behaves like a location
+so it is similar to x = x++ ....right hand side updated the
+value of x to 11 but x = x++ is prefix operator
+which sets x to original value of x that is 10
+++x = x++ is simply similar to x = x++
+
+############### postfixprefix.cpp ###################
+I overloaded the unary operator : -- operator
+I was also able to predict the correct output
+Prefix operator first updates the value of a
+and then the updated value of a is used whereas
+Postfix operator first uses the original value of a
+and then updates the value of a
+
+############## why-it-fails.cpp ####################
+cout << a || b << c is parsed as
+(cout << a) || (b<<c)
+Evaluates to
+cout || (b<<c)
+Compiler complains as || operator not overloaded for the class of which cout is an instance
+
+(cout << a) || b
+cout || b
+cout implicitly cast to a bool (which is 0 if cout has any error flag set, 1 otherwise)
+bool || b works
+
+Tho c++ tries to convert automatically to more suitable form
+but this is not the case with cout and bool 
+they can't just automatically be converted hence it showed error
+
+For the program to work correctly , we just need to add brackets i.e (a | | b)
+
+################# righttoleft.cpp ###################
+I inserted a new statement (++x)=y=(++z) and I was also able to
+predict the output correctly.
+The basic logic is that evealuation takes place from right to left
+that is right hand side of = acts as value and left hand side acts 
+as a location to store the value and the basic logic behind
+prefix and postfix operator as mentioned above.
+
+################## trythis1.cpp ##########################
+I added some function calls in the program, and I was also able to predict
+the output correctly.... In f(i,i++) , first the 2nd parameter is solved 
+first y value is set to original value of i and then value of i is updated
+and then the updated value is sent to x.....In f(++i,i++),first y value is
+set to original value of i and then its updated , then the updated value is 
+again updated and then the new updated value is sent to x.....
+Simillarly the remaining cases were solved using the conditions of the
+prefix and postfix operator.
+
+################### trythis2.cpp ##########################
+I added some function calls, but I was not able to predict the output correctly
+for 1st two function calls, but in 3rd function call , I was able to predict
+the output correctly following the rules of right to left evaluation and the
+conditions of the prefix and postfix operators.
+
+################### exceptions.cpp ########################
+I added a new operator and I was also able to predict the correct output
+
+#################### collection.cpp ######################
+I added the bulk insertion operator and the extraction operator <<
+You can run the program.......I have s=changed the main() to see the output
+
+################# complex.cpp ######################
+I have added the minus operator and the multiplication operator in my code properly

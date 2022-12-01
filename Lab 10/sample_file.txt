@@ -1,0 +1,4 @@
+red yellow green pink
+yellow orange violet
+green orange pink
+violet green red green

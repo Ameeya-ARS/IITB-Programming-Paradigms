@@ -1,0 +1,36 @@
+model_1.cpp was the most simplw way of writing the program but the main problem was that
+we could describe only one stack and not more than one stack...
+
+To overcome the proble we wrote model_2.cpp where we could define more than one stack but 
+we had to declare the array S , the variables top and card as many times as many stack we 
+needed to describe which is not suitable for large no of stacks....
+
+To overcome the problem we used struct in model_3.cpp but in the main() function there was a
+kind of copying which would become very large for huge no of stacks and another problem was that
+anyone could hamper our code knowingly or by mistake as we could not declare them privately
+
+but all the above problems were solved in model_4.cpp where we use Object Orienteg Programming
+paradigm and use the private and public features of the class and there was no instance of
+any kind of code copying which would make the program big
+
+IN 2pinGate.cpp I wrote the function of a simple AND gate that returns 1(i.e true) when both 
+the inputs are true and false in all other cases...
+
+In VendingMachine.cpp my logic is to display the entire list of available drinks , their id and
+ask the customer to input the product id in the main part of the program....
+Then the main() function would call the start() function which has the major role of coordinating between different parts....
+the start() function would call the selectdrink() function whose job is to check if the 
+entered product id is valid or not........
+the job of the insertcoin() is to ask the customer for the money
+If the money entered is insufficient , it returns the customer the entire money and asks him 
+for sufficient money and asks to enter 0 if he does not have sufficient money
+if the money entered is more than or equal to the price then the machine gives the 
+customer the requested drink and also returns the extra money if the customer has
+inserted more money than the required money.........
+
+In queue.cpp the basic idea of the program is to the values are stored in a queue when insert()
+function is called and when the fetch() function is called a value is returned in the order in which
+the values were entered....for example if we inserted 10 then 30 then 50 and then call the fetch 
+function then 10 will be returned then if again fetch function will be called then 
+30 would be returned just the opposite concept from that of stack program
+It just follows the FIRST IN , FIRST OUT PRINCIPLE

@@ -1,0 +1,22 @@
+For improvements, I took the code of 15 puzzle game ..
+Not much changes were possible , but i made most of the
+improvements that I could..........
+
+In old program I was using two extra variables in a and b 
+for mentioning the x and y coordinate of the buttons
+but in new program , I removed those variables and used
+the variab;es i snd j used in loop control to mention the
+x and y coordinates of the button.
+
+I was also doing redundant checking by using simple if statement
+Instead in new program , I made the use of if-else-if ladder
+to stop any un-necessary checks of the conditions
+
+I also combined many conditional checks by sing the and(&&) operator
+and or(||) operator.
+
+I was writing some common lines during condition checking again and again
+Instead I created a boolean variable which is initially set to false 
+but is turned true if the condition becomes true and finally 
+if the condition is true , I did the essential tasks ehich can be better
+understood if You compare both the programs.

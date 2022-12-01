@@ -1,0 +1,12 @@
+I tried to understand the different parts of your given program
+and i also tried to move the shape using arrow keys
+and i was also able to do so..........
+I was trying to make a simple game like snake game
+in which my plan was that a square will eat the circles which
+will increase score and eating any other shape will give  negative
+score but i was not able to figure out how if two shapes were overlapping
+as i was using rand() function , so i am submitting my half written code
+I will surely to try to implement my game and submit in the later
+improvements tab as my head is paining and i am not able to sit
+infront of laptop for that reason
+

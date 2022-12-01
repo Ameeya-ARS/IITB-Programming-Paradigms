@@ -1,0 +1,6 @@
+Green color indicates the blocks that are in correct position
+And Blue color indicates the blocks which are incorrectly placed
+During the 1st submission I was not able to form a working game
+But now the game is completely working and visually colorful
+And I have also implemented a randomize function ehich would give
+the user a unsolved puzzle which can be solved.

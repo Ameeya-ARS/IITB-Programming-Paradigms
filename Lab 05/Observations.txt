@@ -1,0 +1,106 @@
+		Without Compilation refers to the answer as per my knowledge
+		Compiled Answer refers to thr answer as per the compiler
+
+	WITHOUT COMPILATION			COMPILED ANSWER		STATUS
+	-------------------			---------------		------
+1)	A a will give error because		Error				Correct in 1st attempt
+	it is an abstract class because
+	of pure function f()
+-------------------------------------------------------------------------------------------------------------	
+2)	Error because object has not		Segmentation Fault		Correct in 1st attempt
+	been assigned yet			(Core Dumped)
+-------------------------------------------------------------------------------------------------------------
+3)	B::f					B::f				Correct in 1st attempt
+	B::g					B::g
+	B::f					B::f
+	B::g					B::g
+-------------------------------------------------------------------------------------------------------------
+4)	A::f					A::f				Correct in 1st attempt
+	A::g					A::g
+	A::f					A::f
+	A::g					A::g
+	B::f					B::f
+	B::g					B::g
+-------------------------------------------------------------------------------------------------------------
+5)	1st part was same so 2nd part
+	B::f					B::f				Correct in 1st attempt
+	B::g					B::g
+	A::f					A::f
+	A::g					A::g
+	B::f					B::f
+	B::g					B::g
+-------------------------------------------------------------------------------------------------------------
+6)	A::f					A::f				Correct in 1st attempt
+	A::g					A::g
+	B::f					B::f
+	B::g					B::g
+	C::f					C::f
+	A::g					A::g
+	B::f					B::f
+	B::g					B::g
+	C::f					C::f
+	A::g					A::g
+-------------------------------------------------------------------------------------------------------------
+7)	I could not solve it in the 1st instance because I was not able to figure out the use of delete
+	Then I searched on google for the use of delete keyword. Then I tried to solve it.....
+	
+	A::f					A::f				Correct in 1st attempt
+	A::g					A::g				after searching delete
+	A::g					A::g				Pointer to object is not destroyed, 
+	C::f					C::f				value or memory block pointed by 
+	A::g					A::g				pointer is destroyed
+	C::k					C::k
+	C::f					C::f
+	C::f					C::f
+	A::g					A::g
+	Error because object of B 		Segmentation Fault
+	has not been asssigned yet		(Core Dumped)
+----------------------------------------------------------------------------------------------------------------
+8)	C::f					C::f				Correct in 1st attempt
+	B::g					B::g				Function declaration is checked in A
+										but function definition is searched
+										in the order C - B - A
+-------------------------------------------------------------------------------------------------------------------
+9)	10C::f					10C::f				Correct in 1st attempt
+	20B::g					20B::g
+	10C::f					10C::f
+	10C::k					10C::k
+	10C::f					10C::f
+	100B::f				100B::f
+	100B::g				100B::g
+	10C::f					10C::f
+	20B::g					20B::g
+	200A::f				200A::f
+	200A::g				200A::g
+	200A::g				200A::g
+	10C::f					10C::f
+	20B::g					20B::g
+-----------------------------------------------------------------------------------------------------------------------
+10)	100A::f				100A::f			Correct in 1st attempt
+	100A::g				100A::g
+	100A::g				100A::g
+	200B::f				200B::f
+	200B::g				200B::g
+	210A::f				210A::f
+	210A::g				210A::g
+	210A::g				210A::g
+------------------------------------------------------------------------------------------------------------------------
+In my1.cpp I was checking the use of a = b that the values of inherited variables werechanged or not
+And I found out that if A a; and B b; and a = b; then the values of all data members present in  A 
+which are also present in B are changed as per the values of B. So the output is.........
+	10A::f
+	10A::g
+	20B::f
+	20B::g
+	20A::f
+	20A::g
+	20B::f
+	20B::g
+-------------------------------------------------------------------------------------------------------------------------
+From my1.cpp , I was clear that if a=b then all the values of data members of B are copied to data members of A
+But I was not sure that when we write ap = bp, whether only the objects of B with pointer of type A are created
+or the values of data members are also copied as in a = b. I was thinking that only the objects of B with pointer
+of type A will be created and no copying will take place. So i wrote the my2.cpp to check this functioning of the
+programming but when i compiled the code , I found that both tasks occur that is creation of object B with 
+pointer type A as well as copying of values of data members take place.		
+--------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,48 @@
+1. append.pl
+       The basic true statement is to combine an given element with an empty list.
+	   To get a combine list , the syntax is join(list1,list2,X). where list1 and list2
+	   are two lists to be joined. For example join([a,b,c],[4,5],X). gives [a,b,c,4,5]
+
+
+2. count.pl
+        The basic truth statement is that in an empty list, no of occurence of an element
+        is zero. If the head element is same as given element, then we shorten the list by
+		by removing the head element and increase the count by one. And if the head element
+		is not the same as given element then we only shorten the list without increasing
+		the count. The syntax is count(list, element, X). For example to find frquency of occurence
+		of a in [a,b,q,a,a,c] we write count([a,b,q,a,a,c],a,X). which returns 3 And to find 
+		frequency of all characters we use count([a,b,q,a,a,c],X,Y).
+		
+		
+3. factorial.pl
+		The basic truth statement is that factorial of 0 is 1.
+		Then we considered the recursive rule that factorial(n) is n*factorial(n-1)
+		The syntax is factorial(num,X). where the num is the number whose factorial 
+		is to be calculated. For example to calculate factorial of 5 , we can write 
+		factorial(5,X). which returns 120
+		
+		
+4. minimum.pl
+		The basic truth statement is that if only one element is present in a list,
+		then that element is the minimum element of the list. Then in a list if head 
+		element is smaller than min element we change the value of min element with head
+		element and if head element is greater than min element, we donot change the 
+		value. But in both cases after comparing the head element with the min element,
+		we shorten the list by considering th Tail part. The syntax is min_value(list,X).
+		For example to find min value, we can write min_value([3,5,2,6,1],X). returns 1
+		
+		
+5. palindrome.pl
+		The two basic truth statements are that an empty list or a list with only one 
+		element is a palindrome. Then we wrote two functions first and last which return
+		the first and last element of a given list. Then we used the recursive rule to
+		compare if the first and last elements are equal then shortened the list by removing
+		first and last element and passing the new list to the palindrome function.
+		The syntax is palindrome(list). For example palindrome([a,b,c,b,a]). returns true
+		
+6. reverse.pl
+		The basic truth statements are that reverse of an empty list or list with one element
+		is the same list. Then we used the recursive rule that reverse of an list is
+		reverse of the tail part of list and head element joined at last using join function
+		The syntax is reverse_list(list, X). For exampe to find reverse of a list [a,1,b,2,c,3]
+		we write reverse_list([a,1,b,2,c,3],X). which returns [3,c,2,b,1,a]

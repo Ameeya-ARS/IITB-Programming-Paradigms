@@ -1,0 +1,14 @@
+I tried to create a simple game but i got segmentation fault.
+I tried to fix the error but could not fix it after many attempts
+I am submitting the code but i will keep trying to fix the
+error that is causing segmentation fault to the best of my efforts.
+
+Now when the date was extended I was able to find the cause of
+segmentation fault and fixed that.....But my game is much simple 
+Left click is used to jump and right click is used to move forward
+Task is to jump over all the blocks successfully
+I could not implement much features to the game because after the
+midsem, my health was not OK and I was having fever and headache
+So I submitted what I could do to the best of my efforts.
+
+Sorry but I was also not able to click a screenshot of the game....

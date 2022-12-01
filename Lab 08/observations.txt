@@ -1,0 +1,18 @@
+In str2int.cpp i used assert statement to check if length function is greater than zero
+Actually i just wanted to ensure that length is not zero
+Then I mentioned two assert statements whose function is to check 
+if the string entered has only numbers or not which lie in the ASCII code range of
+48 to 57 both inclusive.
+
+In substring.cpp I used first assert statement to compare the lengths
+because of length of string iss less than substring then there is no
+need to search for the substring in the parent string
+I used 2nd assert statement to check that location does not go out of max possible value
+
+In collection.cpp I used cap == sz because cap was used to store the capacity 
+of the collection......Then I used card < cap because we can not store more
+numbers than the declared capacity.......Then i used card>0 because cardinality cannot be negative 
+and if cardinality is 0 , then no element is present to be popped out.
+
+If any changes will be there , I will submit them in improvements tab....
+as now lightning is going on....so i cant use laptop any more for safety purposes

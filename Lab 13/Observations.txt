@@ -1,0 +1,35 @@
+List Reversal :
+	In list_reversal program, sir had not mentioned the termination case 
+	means the truth statement so it was giving an error while compiling.
+	Then I added just the terminal case when single element is present
+	and formed the program list_reversal_error.pl which has logical error
+	in it , so it gives wrong output. For example reverse_list([1,2,3],X). 
+	gives [3,3|3] as output and reverse_list([1,2,3,4],X). gives [4,4,4|4]
+	
+	Then I wrote the list_reversal.pl program which is the correct version to
+	reverse a list. reverse_list([1,2,3],X). returns [3,2,1] which is correct.
+	
+	
+Kth Element :
+	In this program there was a slight error in logic that instead of kth
+	element it was returning (k+1)th element.  So i changed the program a 
+	bit and instead of starting the count from 0 , I started the count from 1
+	which corrected the program. Instead of kthfind([A|L],K,E,0). , 
+	I wrote kthfind([A|L],K,E,1). which started the initial count from 1.
+	For example in sir program kth([a,b,c],1,X). was giving b 
+	but in my prograam the same thing gives a which is the correct answer
+	
+Sibling :
+	In the first sibling program there was small error in logic that was 
+	considering a weird fact that Everyone is his/her own sibling which is
+	not correct . So output was like harry,harry are siblings
+	But the 2nd program resolved this issue by using X/=Y that is only when
+	X and Y are not equal which gave only the correct outputs.
+	
+Path Connections :
+	In 2nd program when we write connected(A,B):-connected(B,A),!.  
+	and run connected(delhi,chennai). it is giving infinite recursion
+	So the path_connection2.pl is an example of infinite recursion.
+	But when we check directly connected regions , it gives true. 
+	But we can correct the infinite recursion using ; operator which I 
+	have written the program as path_connection3.pl which is correct one.
